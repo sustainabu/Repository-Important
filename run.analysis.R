@@ -3,10 +3,10 @@
 
 YTest<- read.table("Y_test.txt")
 XTest<- read.table("X_test.txt")
-SubTest<- read.table("subject_test.txt")
+SubjectTest<- read.table("subject_test.txt")
 YTrain<- read.table("Y_train.txt")
 XTrain<- read.table("X_train.txt")
-SubTrain<- read.table("subject_train.txt")
+SubjectTrain<- read.table("subject_train.txt")
 Features<- read.table("features.txt")
 colnames(XTrain)<-t(Features[2])
 colnames(XTest)<-t(Features[2])
@@ -16,9 +16,9 @@ colnames(XTest)<-t(Features[2])
 #It's having faith the merge of X and Y Train set allign since there is no common ID
 
 XTrain$activities<- YTrain[,1]
-XTrain$participants<- SubTrain[,1]
+XTrain$participants<- SubjectTrain[,1]
 XTest$activities<- YTest[,1]
-XTest$participants<- SubTest[,1]
+XTest$participants<- SubjectTest[,1]
 
 #Assingment1 
 
